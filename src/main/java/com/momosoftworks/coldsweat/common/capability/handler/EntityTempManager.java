@@ -692,7 +692,7 @@ public class EntityTempManager {
 
                     double worldCurrentTemp = Temperature.get(player, Trait.WORLD);
 
-                    Temperature.set(player, Trait.CORE, worldCurrentTemp);
+                    Temperature.set(player, Trait.CORE, (playerCurrentTemp + worldCurrentTemp) / 2);
                 }
             });
         }
